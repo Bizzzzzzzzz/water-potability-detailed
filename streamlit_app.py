@@ -41,9 +41,9 @@ if st.button('Predict Water Safety'):
 
     st.subheader('Prediction Result:')
     if prediction[0] == 1:
-        st.success('The water is predicted to be **SAFE** for consumption.')
+        st.success('aman untuk dikomsumsi')
     else:
-        st.error('The water is predicted to be **UNSAFE** for consumption.')
+        st.error('tidak aman untuk dikomsumsi')
     
     st.write(f"Confidence (Safe): {prediction_proba[0][1]:.2f}")
     st.write(f"Confidence (Unsafe): {prediction_proba[0][0]:.2f}")
