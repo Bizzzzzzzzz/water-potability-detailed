@@ -1,16 +1,15 @@
-
 import streamlit as st
 import pandas as pd
 import joblib
 
-# Load the saved model and scaler
+# Load model dan scaler
 model = joblib.load('xgboost_model.pkl')
 scaler = joblib.load('scaler.pkl')
 feature_ranges = joblib.load('feature_ranges.pkl') # Load feature ranges
 
-# Title of the app
+# nama title
 st.title('Water Quality Prediction App')
-st.write('Enter the water quality parameters to predict if the water is safe for consumption.')
+st.write('masukan parameter air untuk memprediksi jika air aman dikomsumsi')
 
 # Create input fields for all features using sliders
 feature_names = scaler.feature_names_in_.tolist()
@@ -29,7 +28,7 @@ for feature in feature_names:
         value=float(mean_val) # Default to mean value
     )
 
-# Convert input data to a DataFrame
+# Convert input data menjadi 
 input_df = pd.DataFrame([input_data])
 
 # Scale the input data
@@ -50,4 +49,4 @@ if st.button('Predict Water Safety'):
     st.write(f"Confidence (Unsafe): {prediction_proba[0][0]:.2f}")
 
 st.sidebar.markdown('---')
-st.sidebar.markdown('Developed by Your Name/Organization')
+st.sidebar.markdown('Universitas Nusaputra')
