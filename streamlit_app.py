@@ -50,4 +50,4 @@ if st.button('Prediksi Keamanan Air'):
     st.write(f"Kepercayaan Diri (Tidak Aman): {prediction_proba[0][0]:.2f}")
 
 st.sidebar.markdown('---')
-st.sidebar.markdown('Dikembangkan oleh Nama/Organisasi Anda')
+st.sidebar.markdown('Universitas Nusaputra')
